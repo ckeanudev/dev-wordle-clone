@@ -14,6 +14,8 @@ const GameOver = () => {
     setCurrentAttempt,
     reset,
     setReset,
+    setDisabledLetters,
+    disabledLetters,
   } = useContext(AppContext);
 
   return (
@@ -23,7 +25,7 @@ const GameOver = () => {
           ? "🎊🎉You Correctly Guessed!🎉🎊"
           : "☹️You Failed☹️"}
       </h1>
-      <h2>Correct Word is "{correctWord.toUpperCase()}"</h2>
+      <h2>The Correct Word is "{correctWord.toUpperCase()}"</h2>
       {gameOver.guessedWord && (
         <h3>
           You guessed in {currentAttempt.attempt}{" "}
@@ -52,10 +54,13 @@ const GameOver = () => {
             attempt: 0,
             letterPos: 0,
           });
+
           setGameOver({
             gameOver: false,
             guessedWord: false,
           });
+
+          setDisabledLetters([]);
         }}
       >
         Restart
