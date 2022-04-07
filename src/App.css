@@ -1,0 +1,178 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  padding: 4rem 1rem 1rem;
+  background-color: #001845;
+}
+nav {
+  padding: 0.8rem 1rem 0.5rem;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100vw;
+  background-color: #001233;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 1.3rem;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+
+.coder {
+  color: #fff;
+}
+
+/* ----------------------------- BOARD */
+
+.board {
+  margin: 1rem auto;
+  max-width: 400px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.letter {
+  border: 1px solid #023e7d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+  height: 70px;
+  background-color: #002855;
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+#correct {
+  background-color: #007f5f;
+  border: 1px solid #2b9348;
+}
+#almost {
+  background-color: #0353a4;
+  border: 1px solid #0466c8;
+}
+#error {
+  background-color: #33415c;
+  border: 1px solid #5c677d;
+}
+
+/* ------------------------- KEYBOARD */
+
+.keyboard {
+  max-width: 600px;
+  margin: auto;
+}
+
+.line1 {
+  display: flex;
+  justify-content: center;
+}
+.line2 {
+  display: flex;
+  justify-content: center;
+}
+.line3 {
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  min-width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0466c8;
+  margin: 3px;
+  font-size: 1rem;
+  padding: 25px 10px;
+  cursor: pointer;
+  background-color: #023e7d;
+  color: #fff;
+  font-weight: 500;
+}
+
+.key:hover {
+  background-color: rgb(21, 70, 123);
+}
+
+#disabled {
+  color: #fff;
+  background-color: #33415c;
+}
+
+/* --------------------------- GameOver */
+
+.gameOver {
+  max-width: 500px;
+  margin: 2rem auto;
+  text-align: center;
+}
+.gameOver h1 {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.gameOver h2 {
+  color: #fff;
+  font-weight: 500;
+}
+
+.gameOver h3 {
+  color: #fff;
+  font-weight: 500;
+}
+
+.gameOver button {
+  background-color: #0466c8;
+  border: none;
+  padding: 0.3rem 3rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.gameOver button:hover {
+  background-color: rgb(46, 118, 191);
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 4rem 0.5rem 1rem;
+  }
+
+  .letter {
+    margin: 2px;
+    height: 60px;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .key {
+    min-width: 30px;
+    height: 40px;
+    margin: 2px;
+    font-size: 1rem;
+    padding: 20px 10px;
+  }
+}
